@@ -1,16 +1,20 @@
 
 const toggle = document.getElementById("menu-toggle");
 const nav = document.getElementById("nav-menu");
+console.log("Toggle found:", !!toggle, "Nav found:", !!nav);
 
 if (toggle && nav) {
     toggle.addEventListener("click", () => {
+         console.log("Menu toggled");
         nav.classList.toggle("active");
     });
 }
 
 const API_BASE_URL = window.API_CONFIG?.baseUrl || 'http://localhost:5000';
+console.log("API Base URL:", API_BASE_URL);
 
 const form = document.getElementById("registerForm");
+console.log("Register form found:", !!form);
 
 if (form) {
 
@@ -27,6 +31,7 @@ if (form) {
             height: inputs[4].value,
             weight: inputs[5].value
         };
+        console.log("Register data:", data);
 
         try {
             const res = await fetch(`${API_BASE_URL}/register`, {
@@ -46,7 +51,8 @@ if (form) {
             }
 
         } catch (error) {
-            alert("Something went wrong!");
+             console.error("Register error:", error);
+    alert("Something went wrong!");
         }
     });
 }
@@ -76,6 +82,7 @@ if (loginForm) {
             body: JSON.stringify(data)
         });
             const result = await res.json();
+        console.log("Register API response:", result);
 
             if (res.ok && result.success) {
                 localStorage.setItem("user", result.email);
@@ -85,3 +92,4 @@ if (loginForm) {
             }
     });
 }
+console.timeEnd("loginRequest");
