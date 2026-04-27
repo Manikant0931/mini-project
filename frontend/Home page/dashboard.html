@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALL-FIT Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    
+    <!-- Logo -->
+    <h1 class="logo">🏋️ ALL-FIT</h1>
+
+    <!-- Username -->
+    <p id="username">Welcome</p>
+
+    <!-- Menu -->
+    <ul>
+      <li onclick="loadSection('home')"> Home</li>
+      <li onclick="loadSection('workout')"> Workout Plan</li>
+      <li onclick="loadSection('myworkout')"> My Workout</li>
+      <li onclick="loadSection('challenge')"> Daily Challenges</li>
+      <li onclick="loadSection('diet')">Diet Plan</li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    
+    <!-- Section Title -->
+    <h1 id="section-title">Home</h1>
+
+    <!-- Home Content (Default) -->
+    <div id="content" class="home-bg">
+      <div class="overlay">
+        <h1 class="home-title">WELCOME TO ALL-FIT </h1>
+        <p class="home-subtitle">Your Fitness Journey Starts Here</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="dashboard.js"></script>
+<!-- <script src="workoutplan.js"></script> -->
+</body>
+</html>
