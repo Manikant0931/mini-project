@@ -16,3 +16,85 @@ build/
 *~
 .cache/
 temp/
+
+# Vercel configuration
+vercel.json
+
+# OS files
+Thumbs.db
+.AppleDouble
+.LSOverride
+*.swp
+*.swo
+*~
+
+# IDE and editor
+.vscode/*
+!.vscode/extensions.json
+.idea/*
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Dependencies
+/node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+
+# Production builds
+/dist/
+/build/
+/.next/
+/out/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Misc
+.DS_Store
+Thumbs.db
+.prettierignore
+.eslintignore
+
+# Testing
+/coverage
+.nyc_output
+
+# Temporary files
+.tmp/
+temp/
+*.tmp
+
+# Package manager lock files (optional - uncomment if needed)
+# package-lock.json
+# yarn.lock
+
+# Database
+*.sqlite
+*.db
+*.sqlite3
+
+# Logs
+logs/
+*.log
+
+# IDE specific files
+.vscode/
+.idea/
+*.iml
+
+# OS specific
+.DS_Store
+Thumbs.db
+.AppleDouble
+
+# Image directory (if just assets)
+# zym image/ (uncomment if this is just assets)
