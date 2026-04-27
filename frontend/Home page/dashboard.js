@@ -1,14 +1,21 @@
 let user = localStorage.getItem("loggedInUser");
+console.log("Stored user:", user);
 
 if(user && user !== "null"){
     document.getElementById("username").innerText = "Welcome, " + user;
 } else {
     document.getElementById("username").innerText = "Welcome Guest";
 }
+console.log("App initialized successfully");
 
 function loadSection(section){
+    console.log("Loading section:", section);
+console.time("sectionLoad");
     let title = document.getElementById("section-title");
     let content = document.getElementById("content");
+    if(!title || !content){
+    console.warn("Missing DOM elements!");
+}
 
     if(section === "home"){
     title.innerText = "Home";
@@ -136,6 +143,7 @@ function loadSection(section){
     `;
 
     const cards = document.querySelectorAll(".day-card");
+        console.log("Workout cards found:", cards.length);
 
     cards.forEach(card => {
         card.addEventListener("click", () => {
@@ -243,3 +251,4 @@ function loadSection(section){
         content.innerHTML = "<p>Your diet plan </p>";
     }
 }
+console.log("App initialized successfully");
