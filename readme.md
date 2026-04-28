@@ -9,13 +9,11 @@ all-fit/
 ├── all fit backend/          # Express.js backend
 │   ├── models/               # MongoDB schemas
 │   ├── index.js             # Main server file
-│   ├── package.json
-│   ├── vercel.json          # Vercel configuration
+│   ├── package.json       
 │   └── .env.example         # Environment variables example
 ├── frontend/                # Static HTML/CSS/JS frontend
 │   ├── Home page/          # Frontend files
 │   ├── config.js           # API configuration
-│   ├── vercel.json         # Vercel configuration
 │   └── .env.example        # Environment variables example
 └── .gitignore
 ```
