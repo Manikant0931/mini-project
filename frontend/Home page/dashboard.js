@@ -1,5 +1,8 @@
 let user = localStorage.getItem("loggedInUser");
 console.log("Stored user:", user);
+console.log("App Started");
+console.log("Checking login...");
+
 
 if(user && user !== "null"){
     document.getElementById("username").innerText = "Welcome, " + user;
@@ -9,8 +12,8 @@ if(user && user !== "null"){
 console.log("App initialized successfully");
 
 function loadSection(section){
-    console.log("Loading section:", section);
-console.time("sectionLoad");
+console.log("Loading section:", section);
+    console.log("Function loadSection triggered");
     let title = document.getElementById("section-title");
     let content = document.getElementById("content");
     if(!title || !content){
@@ -28,6 +31,7 @@ console.time("sectionLoad");
     `;
 }
     else if(section === "workout"){
+        console.log("Workout section opened");
     title.innerText = "Workout Plan";
 
     content.innerHTML = `
@@ -251,4 +255,4 @@ console.time("sectionLoad");
         content.innerHTML = "<p>Your diet plan </p>";
     }
 }
-console.log("App initialized successfully");
+console.log("ALL-FIT App Loaded Successfully");
